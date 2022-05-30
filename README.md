@@ -2,8 +2,8 @@
 📌 pawintail 퍼인테일 반려동물식품 쇼핑몰 프로젝트
 
 ## 1. 제작기간 & 참여인원
-- 프로젝트 기간 : 2022.03.28 ~ 2022.04.21(25일) </li>
-- 참여자 : @sowonhope @rhay053 외 1명</li>
+- 프로젝트 기간 : 2022.03.28 ~ 2022.04.21(25일) 
+- 참여자 김지선, 류하영, 박소원
 
 ## 2. 사용기술
 📎 <b>Back-End</b>
@@ -23,10 +23,10 @@
 <br>
 
 📎 <b>그 외</b>
-- 화면설계 figma
-- 프로젝트 일정관리 google workspace
+- 화면설계 figma (https://www.figma.com/file/6ldMmydJr4d3xraR2onyZn/PetPang_draft1?node-id=0%3A1)
+- 프로젝트 일정관리 google workspace 
 
-## 3. ERD 설계
+## 3. DB
 <img width="806" alt="ERD pawintail" src="https://user-images.githubusercontent.com/95905063/167971067-826e02bf-d1d1-4ae5-860b-210fcc2a7a9b.png">
 <br>
 
