@@ -36,17 +36,17 @@ public class Member extends BaseEntity {
 	@Column(name="member_id")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-    private String name;
-    @Column(unique = true)
-    private String email;
-    private String password;
-    private String memberAddress;
+	private String name;
+	@Column(unique = true)
+	private String email;
+	private String password;
+	private String memberAddress;
 	private String birthday;
 	private String phoneNumber;
-    @Enumerated(EnumType.STRING)
-    private Role role;
-    
-    public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder, Role role) {
+	@Enumerated(EnumType.STRING)
+	private Role role;
+
+	public static Member createMember(MemberFormDto memberFormDto, PasswordEncoder passwordEncoder, Role role) {
 		String password = passwordEncoder.encode(memberFormDto.getPassword());//화면에 입력받은pw를 enPw로 엔코딩
 
 		Member member = Member.builder()
@@ -57,10 +57,7 @@ public class Member extends BaseEntity {
 				.phoneNumber(memberFormDto.getBirthday())
 				.password(password)
 				.role(Role.USER).build();
-
-    	return member;
-    	
-    }
-
+	return member;
+	}
 }
 
