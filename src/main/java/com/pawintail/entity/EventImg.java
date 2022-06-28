@@ -26,27 +26,26 @@ import lombok.Setter;
 public class EventImg extends BaseEntity{//admin) event등록화면에서 받은 데이터 저장
 
 	@Id
-    @Column(name="event_img_id")
-    @GeneratedValue(strategy = GenerationType.IDENTITY, generator = "event_img_seq_gen")
-    private Long id;
-	
+	@Column(name="event_img_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY, generator = "event_img_seq_gen")
+	private Long id;
+
 	private String eventImgName; //이미지 파일명
 
-    private String eventOriImgName; //원본 이미지 파일명
+	private String eventOriImgName; //원본 이미지 파일명
 
-    private String eventImgUrl; //이미지 조회 경로
+	private String eventImgUrl; //이미지 조회 경로
 
-    private String eventRepImgYn; //대표 이미지 여부
+	private String eventRepImgYn; //대표 이미지 여부
 
-    //Event(부모레코드), EventImg(자식레코드) event삭제시 밑에 엮인 eventImg도 같이 삭제되도록
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "event_id")
-    private Event event;
+	//Event(부모레코드), EventImg(자식레코드) event삭제시 밑에 엮인 eventImg도 같이 삭제되도록
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "event_id")
+	private Event event;
 
-    public void updateEventImg(String eventOriImgName, String eventImgName, String eventImgUrl){
-       this.eventOriImgName = eventOriImgName;
-       this.eventImgName = eventImgName;
-       this.eventImgUrl = eventImgUrl;
-       
-    }
+	public void updateEventImg(String eventOriImgName, String eventImgName, String eventImgUrl){
+	this.eventOriImgName = eventOriImgName;
+	this.eventImgName = eventImgName;
+	this.eventImgUrl = eventImgUrl;
+	}
 }
